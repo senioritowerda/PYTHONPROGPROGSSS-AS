@@ -1,0 +1,12 @@
+Compiling 【Untitled1.cpp】
+Running 【Untitled1.ll】
+Please input your correct username: werda
+Please input your correct password: pogiako123
+Input 1st number
+99
+Input 2nd number
+1
+100.000000
+
+ *My favorite app::C  https://itunes.apple.com/app/id1016290003?mt=8
+Other's Tutorals:http://iii9i.com
