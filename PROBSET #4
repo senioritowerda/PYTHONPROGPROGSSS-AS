@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float day1, day2, day3, totalSales, averageSales;
+
+    // Input
+    cout << "Enter sales for Day 1: ";
+    cin >> day1;
+    cout << "Enter sales for Day 2: ";
+    cin >> day2;
+    cout << "Enter sales for Day 3: ";
+    cin >> day3;
+
+    // Process
+    totalSales = day1 + day2 + day3;
+    averageSales = totalSales / 3;
+
+    // Output
+    cout << "Total Sales: ₱" << totalSales << endl;
+    cout << "Average Sales per Day: ₱" << averageSales << endl;
+
+    return 0;
+}
+
