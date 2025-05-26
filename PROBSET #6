@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, gcd, lcm, tempA, tempB;
+
+    // Input
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+
+    tempA = a;
+    tempB = b;
+
+    // Process: GCD using Euclidean Algorithm
+    while (tempB != 0) {
+        int temp = tempB;
+        tempB = tempA % tempB;
+        tempA = temp;
+    }
+    gcd = tempA;
+    lcm = (a * b) / gcd;
+
+    // Output
+    cout << "GCD: " << gcd << endl;
+    cout << "LCM: " << lcm << endl;
+
+    return 0;
+}
