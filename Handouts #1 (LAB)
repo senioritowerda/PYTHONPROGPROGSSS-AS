@@ -1,0 +1,37 @@
+# Lists to store terms and definitions
+terms = ["voltage", "current", "resistance"]
+definitions = [
+    "The difference in electric potential between two points.",
+    "The flow of electric charge in a circuit.",
+    "The opposition to the flow of current in a circuit."
+]
+
+# Function to get index or return -1 if not found
+def find_term_index(term):
+    try:
+        return terms.index(term.lower())
+    except ValueError:
+        return -1
+
+# Main loop
+while True:
+    user_input = input("\nEnter an engineering term (or type 'exit' to quit): ").lower()
+    index = find_term_index(user_input)
+
+    exit_program = ["exit"].index(user_input)  # Will raise ValueError if not "exit", which is handled below
+
+    # If we reach here, input is not 'exit'
+    try:
+        print(f"Definition of '{terms[index]}': {definitions[index]}")
+    except IndexError:
+        try:
+            add = input("Term not found. Add it? (yes to add): ")
+            add.index("yes")  # raises ValueError if not 'yes'
+            new_def = input("Enter the definition: ")
+            terms.append(user_input)
+            definitions.append(new_def)
+            print(f"'{user_input}' added.")
+        except ValueError:
+            pass
+    except ValueError:
+        break  # exits if user typed "exit"
