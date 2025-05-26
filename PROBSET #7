@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+// Function to perform modular exponentiation
+int mod_exp(int base, int exponent, int mod) {
+    int result = 1;
+    base = base % mod;
+
+    while (exponent > 0) {
+        // If exponent is odd, multiply base with result
+        if (exponent % 2 == 1) {
+            result = (result * base) % mod;
+        }
+        // Square the base
+        base = (base * base) % mod;
+        exponent = exponent / 2;
+    }
+
+    return result;
+}
+
+int main() {
+    int base, exponent, mod;
+    
+    // Input
+    cout << "Enter base: ";
+    cin >> base;
+    cout << "Enter exponent: ";
+    cin >> exponent;
+    cout << "Enter mod: ";
+    cin >> mod;
+
+    // Output result
+    cout << "Result: " << mod_exp(base, exponent, mod) << endl;
+
+    return 0;
+}
